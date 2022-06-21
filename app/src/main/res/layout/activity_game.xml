@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game">
+
+    <pucsim4.caterpillar.MySurfaceView
+        android:id="@+id/mysv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="97dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/mysv"
+        app:layout_constraintEnd_toStartOf="@+id/img1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icecream" />
+    <ImageView
+        android:id="@+id/resume"
+        android:layout_width="206dp"
+        android:layout_height="148dp"
+        android:layout_marginBottom="156dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/mysv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/resume" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="37dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mysv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/icecream" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

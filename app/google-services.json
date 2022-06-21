@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "472321478587",
+    "project_id": "caterpillar-3a35f",
+    "storage_bucket": "caterpillar-3a35f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472321478587:android:ae350e1d7e0abacecf3e9e",
+        "android_client_info": {
+          "package_name": "pucsim4.caterpillar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472321478587-tmeeilt6q7uajbkh8epelid9lvi7djt7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pucsim4.caterpillar",
+            "certificate_hash": "1e9e35da2918277dc406a4d9532a68eaf9a95b48"
+          }
+        },
+        {
+          "client_id": "472321478587-o9j5vj036egsp6q7fjufdluacfm29la5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtqfQ8aN24Q0ynuMJjzXEg8TYUvsfNGf0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472321478587-o9j5vj036egsp6q7fjufdluacfm29la5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

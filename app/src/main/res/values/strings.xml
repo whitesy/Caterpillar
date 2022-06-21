@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Caterpillar</string>
+
+    //login screen
+    <string name="create_an_account">Create an account</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="continue_google">Continue with Google</string>
+    <string name="already_have_an_account">Already have an account?</string>
+
+</resources>
