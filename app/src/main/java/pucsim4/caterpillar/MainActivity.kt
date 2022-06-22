@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         username= intent.getStringExtra(login.EXTRA_NAME)
         binding.textDisplayName.text=username
 
+
+
         //播放首頁背景音樂
         mper = MediaPlayer()
         mper = MediaPlayer.create(this, R.raw.bgmusic)
