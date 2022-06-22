@@ -80,6 +80,7 @@ class login : AppCompatActivity(){
             val intent = Intent(applicationContext,MainActivity::class.java)
             intent.putExtra(EXTRA_NAME,user.displayName)
             startActivity(intent)
+            finish()
         }
     }
 

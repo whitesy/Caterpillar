@@ -15,9 +15,9 @@ class MySurfaceView(context: Context?, attrs: AttributeSet?)
     var BGmoveX:Int = 0
     var crawl:crawl
     var gDetector: GestureDetector
-    lateinit var enemy: enemy
-
-    //var mper: MediaPlayer
+    lateinit var enemy1: enemy
+    lateinit var enemy2: enemy
+    lateinit var enemy3: enemy
 
     init {
         surfaceHolder = getHolder()
@@ -26,10 +26,14 @@ class MySurfaceView(context: Context?, attrs: AttributeSet?)
         crawl = crawl(context!!)
         gDetector = GestureDetector(context, this)
         //mper = MediaPlayer()
-        enemy= enemy(context!!)
+        enemy1= enemy(context!!)
+        enemy2= enemy(context!!)
+        enemy2.speed=(70..100).random()
+        enemy3= enemy(context!!)
+        enemy3.speed=(40..70).random()
+
     }
     override fun surfaceCreated(holder: SurfaceHolder) {
-
         var canvas: Canvas = surfaceHolder.lockCanvas()
         drawSomething(canvas)
         surfaceHolder.unlockCanvasAndPost(canvas)
@@ -43,8 +47,8 @@ class MySurfaceView(context: Context?, attrs: AttributeSet?)
         var h:Int = res.displayMetrics.heightPixels
         var SrcRect:Rect = Rect(0, 0, BG.width, BG.height) //裁切
         var DestRect:Rect = Rect(0, 0, w, h)//顯示的區域
-        //canvas.drawBitmap(BG, SrcRect, DestRect, null)
         var BGnewX:Int = w + BGmoveX
+
 
         if (BGnewX <= 0) {
             BGmoveX = 0
@@ -57,17 +61,15 @@ class MySurfaceView(context: Context?, attrs: AttributeSet?)
             DestRect=Rect(BGnewX,0,BGnewX+w,h)
             canvas.drawBitmap(BG, SrcRect, DestRect, null)
         }
-
         crawl.draw(canvas)
-        enemy.draw(canvas)
+        enemy1.draw(canvas)
+        enemy2.draw(canvas)
+        enemy3.draw(canvas)
     }
     override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
-
     }
 
     override fun surfaceDestroyed(holder: SurfaceHolder) {
-
-
     }
 
     override fun onDown(e: MotionEvent?): Boolean {
@@ -75,7 +77,6 @@ class MySurfaceView(context: Context?, attrs: AttributeSet?)
     }
 
     override fun onShowPress(e: MotionEvent?) {
-
     }
 
     override fun onSingleTapUp(e: MotionEvent?): Boolean {
