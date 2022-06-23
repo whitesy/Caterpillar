@@ -25,6 +25,8 @@ class game : AppCompatActivity() ,View.OnTouchListener{
     lateinit var builder:AlertDialog.Builder
     lateinit var mper: MediaPlayer
 
+    //var username: String?=intent.getStringExtra("username")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -127,7 +129,9 @@ class game : AppCompatActivity() ,View.OnTouchListener{
         }else{
             Toast.makeText(this, "返回首頁", Toast.LENGTH_LONG).show();
             val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent);
+            //intent.putExtra("username",username)
+            startActivity(intent)
+            //finish()
         }
         if(mper != null && mper.isPlaying()){
             mper.pause()

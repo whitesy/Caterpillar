@@ -3,10 +3,12 @@ package pucsim4.caterpillar
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+
 import pucsim4.caterpillar.databinding.ActivityGameoverBinding
 
 class gameover : AppCompatActivity() {
     lateinit var binding: ActivityGameoverBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gameover)
@@ -26,5 +28,6 @@ class gameover : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
     }
 }
