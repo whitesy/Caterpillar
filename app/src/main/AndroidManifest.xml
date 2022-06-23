@@ -37,7 +37,8 @@
         <activity
             android:name=".game"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.leader"/>
         <activity
             android:name=".gameover"
             android:exported="false"
